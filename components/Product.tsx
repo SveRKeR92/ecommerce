@@ -22,7 +22,7 @@ const Product = (props: IProductProps) => {
                   <div className={styles.product__image}>
                         <Image src={props.product.image} alt={props.product.image.src}></Image>
                   </div>
-                  <div className="product__price-button-container">
+                  <div style={{justifyContent:'space-between', width:'80%', margin:'auto'}} className="product__price-button-container">
                         <div className={styles.product__price}>
                               ${props.product.price.toFixed(2)}
                         </div>
