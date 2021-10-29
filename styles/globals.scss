@@ -63,3 +63,12 @@ html, body {
   display: flex;
   grid-area: button;
 }
+
+@media screen and (max-width: 375px){
+  .app {    
+    width: 100%;     
+    min-width: unset; 
+    max-width: 100%;
+    overflow-x: hidden;
+  } 
+}

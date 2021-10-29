@@ -33,3 +33,9 @@
     color: mixins.$color-purple;
   }
 }
+
+@media screen and (max-width: 375px){
+  .backgroundimage{    
+    left: -15vw;
+  } 
+}

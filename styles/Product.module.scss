@@ -129,3 +129,13 @@
     }
   }
 }
+
+@media screen and (max-width: 390px) {
+  .product{
+    text-align: center;
+
+    &__price-button-container{
+      justify-content: space-between !important;
+    }
+  }
+}
