@@ -9,7 +9,8 @@ import Head from "next/head"
 import iphone from "../public/iphone.png"
 
 interface IProductListProps{
-	products: IProduct[]
+	products: IProduct[],
+
 }
 
 const Home = ({products} : IProductListProps) => {
@@ -23,8 +24,9 @@ const Home = ({products} : IProductListProps) => {
 			</Head>
 			<main className="main">
 				<Jumbotron />
-				<ProductList products={products}/>
+				<ProductList products={products.slice(0,3)}/>
 				<Contact />
+				<ProductList products={products.slice(3,6)}/>
 			</main>
 			<Script src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"/>
             	<div hidden id="snipcart" data-api-key="OWNlZTNlYmItZTU5OS00MmI4LThjOTAtMjY0NzAyYmI2ODAxNjM3NjIyMjY3MDMxMTIzMzUx"></div>
@@ -55,6 +57,30 @@ export const products: IProduct[] = [
 		id: '3',
 		name : "iphone XR",
 		price: 2000,
+		description: "Superbe iPhone comme neuf ;)",
+		url: '/api/products/iphonexr',
+		image: iphone
+	},
+	{
+		id: '4',
+		name : "iphone 12",
+		price: 2200,
+		description: "Superbe iPhone comme neuf ;)",
+		url: '/api/products/iphonex',
+		image : iphone
+	},
+	{
+		id: '5',
+		name : "iphone 12S",
+		price: 2500,
+		description: "Superbe iPhone comme neuf ;)",
+		url: '/api/products/iphonexs',
+		image: iphone
+	},
+	{
+		id: '6',
+		name : "Iphone 15",
+		price: 9999,
 		description: "Superbe iPhone comme neuf ;)",
 		url: '/api/products/iphonexr',
 		image: iphone

@@ -1,5 +1,6 @@
 import Product, {IProduct} from "./Product"
 import styles from "../styles/ProductList.module.scss"
+import Contact from "./Contact"
 
 interface IProductListProps {
       products: IProduct[]
